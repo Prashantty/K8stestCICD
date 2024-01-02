@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: containerprashant 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: containerprashant
+  template:
+    metadata:
+      labels:
+        app: containerprashant 
+    spec:
+      containers:
+        - name: containerprashant 
+          image: conatainertest.azurecr.io/containerprashant
+          ports:
+          - containerPort: 80
